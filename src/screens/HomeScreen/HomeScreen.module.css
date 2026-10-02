@@ -6,7 +6,7 @@
 
 .rays {
   position: absolute;
-  inset: -50%;
+  inset: -150%;
   background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.08) 0 8deg, transparent 8deg 16deg);
   pointer-events: none;
   will-change: transform;
