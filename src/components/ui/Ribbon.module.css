@@ -22,12 +22,12 @@
 
 .ribbon::before {
   left: -18px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 30% 50%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), 60% 100%, 0 100%, 30% 50%);
 }
 
 .ribbon::after {
   right: -18px;
-  clip-path: polygon(0 0, 100% 0, 70% 50%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 70% 50%, 100% 100%, 40% 100%, 0 calc(100% - 8px));
 }
 
 .yellow {
