@@ -6,18 +6,16 @@ import {
   useState,
   type ReactNode,
 } from 'react';
-import { LEVELS } from '../constants/levels';
+import { DEFAULT_LEVEL } from '../constants/levels';
 import { STREAK_DAYS } from '../constants/rewards';
 import { useLocalStorage } from '../hooks/useLocalStorage';
-import type { Level, LevelId } from '../types/game';
+import type { Level } from '../types/game';
 import type { Screen } from '../types/screen';
 
 interface AppContextValue {
   screen: Screen;
   navigate: (screen: Screen) => void;
-  levelId: LevelId;
   level: Level;
-  setLevelId: (id: LevelId) => void;
   /** Number of completed daily-streak days (0..5). */
   streak: number;
   claimReward: () => void;
@@ -33,7 +31,6 @@ const AppContext = createContext<AppContextValue | null>(null);
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const [screen, setScreen] = useState<Screen>('home');
-  const [levelId, setLevelId] = useLocalStorage<LevelId>('memgame.level', 'normal');
   const [streak, setStreak] = useLocalStorage<number>('memgame.streak', 2);
   const [bestScore, setBestScore] = useLocalStorage<number>('memgame.best', 0);
   const [muted, setMuted] = useLocalStorage<boolean>('memgame.muted', true);
@@ -58,9 +55,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const value: AppContextValue = {
     screen,
     navigate: setScreen,
-    levelId,
-    level: LEVELS[levelId] ?? LEVELS.normal,
-    setLevelId,
+    level: DEFAULT_LEVEL,
     streak,
     claimReward,
     bestScore,

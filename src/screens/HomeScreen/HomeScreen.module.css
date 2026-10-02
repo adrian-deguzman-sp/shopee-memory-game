@@ -120,29 +120,6 @@
   padding: 14px 20px 26px;
 }
 
-.levels {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-
-.chip {
-  padding: 5px 14px;
-  font-size: 13px;
-  font-weight: 700;
-  color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.55);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.chipActive {
-  color: var(--orange);
-  border-color: #fff;
-  background: #fff;
-}
-
 @keyframes float {
   0%,
   100% {

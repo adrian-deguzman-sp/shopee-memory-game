@@ -15,7 +15,7 @@ On desktop the app renders inside a 375x812 phone frame; below 500px viewport wi
 
 ## How it plays
 
-- **Home**: pick a grid (4×3, 4×4, 4×5, 6×4) and tap **Play Now**. **?** opens the help/sound modal.
+- **Home**: tap **Play Now** (single 4×4 board). **?** opens the help/sound modal.
 - **Game**: countdown timer + move counter. Flip two cards; matches stay open, mismatches shake and flip back after ~0.8s (input locked meanwhile). The back arrow pauses.
 - **Win** → confetti modal → **Claim Now** → **Rewards** (mock ₱50 voucher, daily streak advances). **Play Again** restarts.
 - **Time runs out** → Game Over modal (Try Again / Home).
@@ -66,6 +66,6 @@ coin, cart, bag, parcel, voucher, flash-sale bolt, free-shipping truck, gift, he
 
 - The timer is a **countdown** (60s on the default 4×4), inferred from the mockup values (00:45 at 6 moves, 00:20 at the win).
 - One move = one pair of flips.
-- Pause, Game Over, Help and the difficulty chips are not in the mockup; they were added.
+- Pause, Game Over and Help are not in the mockup; they were added. Only the 4×4 board is offered.
 - Every win grants the same mock ₱50 voucher (valid until Oct 31, 2026).
 - Score = `pairs*100 + timeLeft*5 − extraMoves*5` (shown on the win modal; best score stored locally).

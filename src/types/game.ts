@@ -22,7 +22,7 @@ export interface CardModel {
 
 export type GameStatus = 'idle' | 'playing' | 'paused' | 'won' | 'lost';
 
-export type LevelId = 'easy' | 'normal' | 'hard' | 'expert';
+export type LevelId = 'normal';
 
 export interface Level {
   id: LevelId;

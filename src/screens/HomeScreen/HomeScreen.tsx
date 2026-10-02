@@ -11,13 +11,11 @@ import { ScreenHeader } from '../../components/layout/ScreenHeader';
 import { HelpModal } from '../../components/modals/HelpModal';
 import { Button } from '../../components/ui/Button';
 import { Ribbon } from '../../components/ui/Ribbon';
-import { LEVEL_LIST } from '../../constants/levels';
 import { useApp } from '../../context/AppContext';
-import { cx } from '../../utils/cx';
 import styles from './HomeScreen.module.css';
 
 export function HomeScreen() {
-  const { navigate, levelId, setLevelId } = useApp();
+  const { navigate } = useApp();
   const [showHelp, setShowHelp] = useState(false);
 
   return (
@@ -67,20 +65,6 @@ export function HomeScreen() {
       </ul>
 
       <div className={styles.cta}>
-        <div className={styles.levels} role="radiogroup" aria-label="Difficulty">
-          {LEVEL_LIST.map((level) => (
-            <button
-              key={level.id}
-              type="button"
-              role="radio"
-              aria-checked={level.id === levelId}
-              className={cx(styles.chip, level.id === levelId && styles.chipActive)}
-              onClick={() => setLevelId(level.id)}
-            >
-              {level.label}
-            </button>
-          ))}
-        </div>
         <Button variant="play" block onClick={() => navigate('game')}>
           Play Now
         </Button>
