@@ -8,7 +8,7 @@ const FONT = "'Baloo 2', 'Arial Black', Impact, sans-serif";
 export function TitleArt({ className }: TitleArtProps) {
   return (
     <svg
-      viewBox="0 0 300 160"
+      viewBox="0 0 360 160"
       className={className}
       role="img"
       aria-label="Memory Game"
@@ -29,21 +29,21 @@ export function TitleArt({ className }: TitleArtProps) {
         <text x="152" y="72" fontSize="64" textLength="268" lengthAdjust="spacingAndGlyphs" fill="#5B1F08" stroke="#5B1F08" strokeWidth="16">
           MEMORY
         </text>
-        <text x="152" y="144" fontSize="84" textLength="204" lengthAdjust="spacingAndGlyphs" fill="#5B1F08" stroke="#5B1F08" strokeWidth="16">
+        <text x="182" y="144" fontSize="84" textLength="204" lengthAdjust="spacingAndGlyphs" fill="#5B1F08" stroke="#5B1F08" strokeWidth="16">
           GAME
         </text>
         {/* outlines */}
         <text x="150" y="66" fontSize="64" textLength="268" lengthAdjust="spacingAndGlyphs" fill="none" stroke="#7A2E0E" strokeWidth="12">
           MEMORY
         </text>
-        <text x="150" y="138" fontSize="84" textLength="204" lengthAdjust="spacingAndGlyphs" fill="none" stroke="#7A2E0E" strokeWidth="12">
+        <text x="180" y="138" fontSize="84" textLength="204" lengthAdjust="spacingAndGlyphs" fill="none" stroke="#7A2E0E" strokeWidth="12">
           GAME
         </text>
         {/* fills */}
-        <text x="150" y="66" fontSize="64" textLength="268" lengthAdjust="spacingAndGlyphs" fill="url(#titleYellow)" stroke="#fff" strokeWidth="1.5">
+        <text x="150" y="66" fontSize="64" textLength="268" lengthAdjust="spacingAndGlyphs" fill="url(#titleYellow)">
           MEMORY
         </text>
-        <text x="150" y="138" fontSize="84" textLength="204" lengthAdjust="spacingAndGlyphs" fill="url(#titleWhite)">
+        <text x="180" y="138" fontSize="84" textLength="204" lengthAdjust="spacingAndGlyphs" fill="url(#titleWhite)">
           GAME
         </text>
       </g>
