@@ -4,12 +4,19 @@
   background: radial-gradient(circle at 50% 38%, #ff8a4c 0, #f4562f 55%, #e04021 100%);
 }
 
-.home::before {
-  content: '';
+.rays {
   position: absolute;
   inset: -50%;
-  background: repeating-conic-gradient(from 0deg at 50% 45%, rgba(255, 255, 255, 0.07) 0 8deg, transparent 8deg 16deg);
+  background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.08) 0 8deg, transparent 8deg 16deg);
   pointer-events: none;
+  will-change: transform;
+  animation: spinRays 60s linear infinite;
+}
+
+@keyframes spinRays {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .title,

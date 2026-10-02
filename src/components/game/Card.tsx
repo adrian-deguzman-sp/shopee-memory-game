@@ -31,7 +31,8 @@ export function Card({ card, index, mismatch, onFlip }: CardProps) {
       disabled={card.isMatched}
       aria-label={label}
     >
-      <span className={styles.inner}>
+      <span className={cx(styles.scene, card.isMatched && styles.matched, mismatch && styles.mismatch)}>
+      <span className={styles.inner} data-keep-motion>
         <span className={cx(styles.face, styles.back)}>
           <BagGlyph size="52%" bag="#FFFFFF" letter="#EE4D2D" />
         </span>
@@ -40,6 +41,7 @@ export function Card({ card, index, mismatch, onFlip }: CardProps) {
             <Icon />
           </span>
         </span>
+      </span>
       </span>
     </button>
   );

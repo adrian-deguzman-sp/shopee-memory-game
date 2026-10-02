@@ -20,6 +20,7 @@ export function HomeScreen() {
 
   return (
     <Screen className={styles.home}>
+      <div className={styles.rays} data-keep-motion aria-hidden="true" />
       <ScreenHeader tone="light" center={<Logo />} onHelp={() => setShowHelp(true)} />
 
       <TitleArt className={styles.title} />

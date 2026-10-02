@@ -1,9 +1,10 @@
 /* Component-specific keyframes live in each CSS module (CSS Modules scopes them).
    This file only holds global motion preferences. */
+/* Elements marked data-keep-motion (card flip, rotating rays) stay animated: they are small, non-jarring motions. */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *:not([data-keep-motion]),
+  *:not([data-keep-motion])::before,
+  *:not([data-keep-motion])::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

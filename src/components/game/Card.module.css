@@ -4,7 +4,15 @@
   width: 100%;
   aspect-ratio: 5 / 6;
   border-radius: var(--radius-card);
+}
+
+/* 3D context lives on a plain span; <button> handles perspective/preserve-3d poorly in some browsers. */
+.scene {
+  position: absolute;
+  inset: 0;
+  display: block;
   perspective: 700px;
+  -webkit-perspective: 700px;
 }
 
 .inner {
@@ -12,6 +20,7 @@
   inset: 0;
   display: block;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transition: transform 0.45s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
