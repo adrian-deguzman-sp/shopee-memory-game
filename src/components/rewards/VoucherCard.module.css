@@ -1,0 +1,85 @@
+.card {
+  display: flex;
+  overflow: hidden;
+  text-align: left;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(238, 77, 45, 0.18);
+}
+
+.stub {
+  position: relative;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  background: linear-gradient(180deg, #ff6a3d, #ee4d2d);
+  /* ticket notch on the left edge */
+  -webkit-mask: radial-gradient(circle 7px at 0 50%, transparent 98%, #000) ;
+  mask: radial-gradient(circle 7px at 0 50%, transparent 98%, #000);
+}
+
+.compact .stub {
+  width: 76px;
+}
+
+.full .stub {
+  width: 92px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding: 10px 14px;
+  min-width: 0;
+}
+
+.compact .body {
+  align-items: center;
+  text-align: center;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.amount {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--orange);
+}
+
+.compact .amount {
+  font-size: 34px;
+}
+
+.full .amount {
+  font-size: 44px;
+}
+
+.title {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.compact .title {
+  font-size: 16px;
+}
+
+.full .title {
+  font-size: 20px;
+}
+
+.valid {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+  padding-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  border-top: 1px solid #f0e6df;
+}

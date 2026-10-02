@@ -1,0 +1,18 @@
+:root {
+  --orange: #ee4d2d;
+  --orange-light: #ff7337;
+  --orange-dark: #d0381a;
+  --peach-1: #fdf0e6;
+  --peach-2: #fbddc8;
+  --yellow: #ffc83d;
+  --brown: #7a2e0e;
+  --ink: #222222;
+  --muted: #757575;
+  --green: #34c759;
+
+  --radius-card: 12px;
+  --radius-modal: 24px;
+
+  --font-body: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Baloo 2', 'Arial Rounded MT Bold', 'Arial Black', Arial, sans-serif;
+}

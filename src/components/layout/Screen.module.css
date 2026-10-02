@@ -1,0 +1,19 @@
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--safe-top);
+  animation: screenIn 0.3s ease both;
+}
+
+@keyframes screenIn {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

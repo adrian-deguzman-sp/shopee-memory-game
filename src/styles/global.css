@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: radial-gradient(circle at 30% 20%, #f7e4d6, #e9c9b6 70%);
+  user-select: none;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 2px;
+}
+
+button:disabled {
+  cursor: default;
+}

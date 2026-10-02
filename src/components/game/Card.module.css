@@ -1,0 +1,98 @@
+.card {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 6;
+  border-radius: var(--radius-card);
+  perspective: 700px;
+}
+
+.inner {
+  position: absolute;
+  inset: 0;
+  display: block;
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.flipped .inner {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.back {
+  background: repeating-linear-gradient(45deg, #ff6a3d 0 9px, #f4562f 9px 18px);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+    0 3px 0 #c93a1c,
+    0 6px 10px rgba(238, 77, 45, 0.25);
+}
+
+.front {
+  background: #fff;
+  transform: rotateY(180deg);
+  box-shadow: 0 0 0 3px #ffe3d3 inset, 0 3px 10px rgba(238, 77, 45, 0.25);
+}
+
+.icon {
+  display: block;
+  width: 62%;
+  aspect-ratio: 1;
+}
+
+.icon > svg {
+  display: block;
+}
+
+.matched .front {
+  box-shadow:
+    0 0 0 3px #ffc83d inset,
+    0 0 14px rgba(255, 200, 61, 0.85);
+}
+
+.matched {
+  animation: pop 0.5s 0.4s ease both;
+}
+
+.mismatch {
+  animation: shake 0.4s 0.45s ease both;
+}
+
+@keyframes pop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}

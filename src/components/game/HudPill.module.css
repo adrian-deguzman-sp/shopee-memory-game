@@ -1,0 +1,61 @@
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 128px;
+  height: 52px;
+  padding: 0 18px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(238, 77, 45, 0.12);
+}
+
+.reverse {
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  color: var(--orange);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.05;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.value {
+  font-size: 22px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+.urgent .value,
+.urgent .icon {
+  color: #d0021b;
+}
+
+.urgent {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}

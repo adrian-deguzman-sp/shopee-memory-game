@@ -1,0 +1,154 @@
+.home {
+  overflow: hidden;
+  color: #fff;
+  background: radial-gradient(circle at 50% 38%, #ff8a4c 0, #f4562f 55%, #e04021 100%);
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: repeating-conic-gradient(from 0deg at 50% 45%, rgba(255, 255, 255, 0.07) 0 8deg, transparent 8deg 16deg);
+  pointer-events: none;
+}
+
+.title,
+.stage,
+.cta {
+  position: relative;
+}
+
+.title {
+  display: block;
+  flex-shrink: 0;
+  width: 290px;
+  margin: 0 auto;
+  filter: drop-shadow(0 6px 6px rgba(90, 25, 0, 0.35));
+}
+
+.ribbon {
+  position: relative;
+  align-self: center;
+  margin-top: -14px;
+  z-index: 2;
+}
+
+.stage {
+  flex: 1;
+  min-height: 150px;
+  margin-bottom: -40px;
+}
+
+.mascot {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: float 3s ease-in-out infinite;
+}
+
+.giftLeft {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+}
+
+.giftLeft2 {
+  position: absolute;
+  bottom: 52px;
+  left: 62px;
+}
+
+.giftRight {
+  position: absolute;
+  bottom: 44px;
+  right: 8px;
+}
+
+.coinA {
+  position: absolute;
+  bottom: 92px;
+  left: 30px;
+}
+
+.coinB {
+  position: absolute;
+  top: 20px;
+  right: 56px;
+}
+
+.coinC {
+  position: absolute;
+  bottom: 60px;
+  right: 74px;
+}
+
+.how {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 20px;
+  padding: 14px 18px;
+  list-style: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(100, 25, 0, 0.25);
+}
+
+.how li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ico {
+  display: grid;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 12px;
+  background: #fdf0e6;
+}
+
+.cta {
+  padding: 14px 20px 26px;
+}
+
+.levels {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.chip {
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.chipActive {
+  color: var(--orange);
+  border-color: #fff;
+  background: #fff;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-6px);
+  }
+}

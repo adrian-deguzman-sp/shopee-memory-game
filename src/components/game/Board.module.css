@@ -1,0 +1,9 @@
+.board {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+}
+
+.dense {
+  gap: 6px;
+}

@@ -1,0 +1,28 @@
+.confetti {
+  position: absolute;
+  inset: 0;
+  z-index: 60;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.piece {
+  position: absolute;
+  top: -16px;
+  width: 8px;
+  height: 14px;
+  border-radius: 2px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    translate: 0 0;
+    opacity: 1;
+  }
+  100% {
+    translate: 20px 780px;
+    opacity: 0.9;
+    rotate: 540deg;
+  }
+}
