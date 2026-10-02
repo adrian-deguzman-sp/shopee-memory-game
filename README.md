@@ -64,7 +64,7 @@ coin, cart, bag, parcel, voucher, flash-sale bolt, free-shipping truck, gift, he
 
 ## Assumptions
 
-- The timer is a **countdown** (30s on the default 4×4), inferred from the mockup values (00:45 at 6 moves, 00:20 at the win).
+- The timer is a **countdown** (60s on the default 4×4), inferred from the mockup values (00:45 at 6 moves, 00:20 at the win).
 - One move = one pair of flips.
 - Pause, Game Over, Help and the difficulty chips are not in the mockup; they were added.
 - Every win grants the same mock ₱50 voucher (valid until Oct 31, 2026).
