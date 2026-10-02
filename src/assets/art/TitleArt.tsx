@@ -26,24 +26,17 @@ export function TitleArt({ className }: TitleArtProps) {
       </defs>
       <g fontFamily={FONT} fontWeight="800" textAnchor="middle" strokeLinejoin="round">
         {/* shadows */}
-        <text x="152" y="72" fontSize="64" textLength="268" lengthAdjust="spacingAndGlyphs" fill="#5B1F08" stroke="#5B1F08" strokeWidth="16">
+        <text x="152" y="72" fontSize="64" fill="#5B1F08" stroke="#5B1F08" strokeWidth="16">
           MEMORY
         </text>
-        <text x="182" y="144" fontSize="84" textLength="204" lengthAdjust="spacingAndGlyphs" fill="#5B1F08" stroke="#5B1F08" strokeWidth="16">
+        <text x="182" y="144" fontSize="84" fill="#5B1F08" stroke="#5B1F08" strokeWidth="16">
           GAME
         </text>
-        {/* outlines */}
-        <text x="150" y="66" fontSize="64" textLength="268" lengthAdjust="spacingAndGlyphs" fill="none" stroke="#7A2E0E" strokeWidth="12">
+        {/* outline + fill in one element; stroke is painted under the fill so it can't eat the letters */}
+        <text x="150" y="66" fontSize="64" fill="url(#titleYellow)" stroke="#7A2E0E" strokeWidth="12" paintOrder="stroke fill">
           MEMORY
         </text>
-        <text x="180" y="138" fontSize="84" textLength="204" lengthAdjust="spacingAndGlyphs" fill="none" stroke="#7A2E0E" strokeWidth="12">
-          GAME
-        </text>
-        {/* fills */}
-        <text x="150" y="66" fontSize="64" textLength="268" lengthAdjust="spacingAndGlyphs" fill="url(#titleYellow)">
-          MEMORY
-        </text>
-        <text x="180" y="138" fontSize="84" textLength="204" lengthAdjust="spacingAndGlyphs" fill="url(#titleWhite)">
+        <text x="180" y="138" fontSize="84" fill="url(#titleWhite)" stroke="#7A2E0E" strokeWidth="12" paintOrder="stroke fill">
           GAME
         </text>
       </g>
