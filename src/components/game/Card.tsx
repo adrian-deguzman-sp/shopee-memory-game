@@ -24,8 +24,6 @@ export function Card({ card, index, mismatch, onFlip }: CardProps) {
       className={cx(
         styles.card,
         (card.isFlipped || card.isMatched) && styles.flipped,
-        card.isMatched && styles.matched,
-        mismatch && styles.mismatch,
       )}
       onClick={() => onFlip(card.id)}
       disabled={card.isMatched}
