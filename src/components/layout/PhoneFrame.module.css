@@ -12,6 +12,34 @@
   display: none;
 }
 
+/* Fills the notch / status bar area on phones so it matches the screen's top color. */
+.frame::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  height: env(safe-area-inset-top, 0px);
+  background: var(--strip-color);
+  pointer-events: none;
+}
+
+.light {
+  --strip-color: #f4562f;
+}
+
+.dark {
+  --strip-color: #fdf0e6;
+}
+
+/* Installed to the home screen: status bar text is always white (black-translucent), so keep the strip orange. */
+@media (display-mode: standalone) {
+  .dark {
+    --strip-color: #ee4d2d;
+  }
+}
+
 .light {
   --status-color: #fff;
 }
@@ -21,6 +49,10 @@
 }
 
 @media (min-width: 500px) {
+  .frame::before {
+    display: none;
+  }
+
   .frame {
     --safe-top: 44px;
     width: 375px;

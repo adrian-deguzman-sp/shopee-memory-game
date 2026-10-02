@@ -31,6 +31,19 @@ body {
   width: 100%;
 }
 
+/* On phones, tint the page to match the active screen so the status bar blends in. */
+@media (max-width: 499px) {
+  html,
+  html body {
+    background: #fdf0e6;
+  }
+
+  html[data-screen='home'],
+  html[data-screen='home'] body {
+    background: #f4562f;
+  }
+}
+
 button {
   font: inherit;
   color: inherit;
