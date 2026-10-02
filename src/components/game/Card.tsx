@@ -1,6 +1,5 @@
 import { CARD_LABELS } from '../../constants/cards';
 import { CARD_ICONS } from '../../assets/icons/CardIcons';
-import { BagGlyph } from '../../assets/art/BagGlyph';
 import type { CardModel } from '../../types/game';
 import { cx } from '../../utils/cx';
 import styles from './Card.module.css';
@@ -32,7 +31,7 @@ export function Card({ card, index, mismatch, onFlip }: CardProps) {
       <span className={cx(styles.scene, card.isMatched && styles.matched, mismatch && styles.mismatch)}>
       <span className={styles.inner} data-keep-motion>
         <span className={cx(styles.face, styles.back)}>
-          <BagGlyph size="52%" bag="#FFFFFF" letter="#EE4D2D" />
+          <img src="/shopee_logo.png" alt="Shopee" style={{ width: '52%', height: 'auto' }} />
         </span>
         <span className={cx(styles.face, styles.front)}>
           <span className={styles.icon}>
