@@ -1,55 +1,80 @@
-.ribbon {
+.wrapper {
+  /* Centralized geometry variables */
+  --fold-drop: 8px;
+  --tail-width: 30px;
+  --tail-offset: 18px;
+  
   position: relative;
+  display: inline-flex;
   isolation: isolate;
-  display: inline-block;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
   padding: 10px 26px;
   text-align: center;
   font-weight: 800;
   line-height: 1.2;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  
+  /* Themed variables applied here */
+  background: var(--bg);
+  color: var(--txt-color);
+  font-size: var(--size);
+  font-family: var(--font, inherit);
+  text-shadow: var(--txt-shadow, none);
 }
 
-.ribbon::before,
-.ribbon::after {
-  content: '';
+.tail {
   position: absolute;
-  top: 8px;
-  z-index: -1;
-  width: 30px;
-  height: 100%;
-  background: var(--tail);
+  top: var(--fold-drop);
+  bottom: calc(var(--fold-drop) * -1);
+  width: var(--tail-width);
+  background: var(--tail-color);
+  z-index: 1;
 }
 
-.ribbon::before {
-  left: -18px;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), 60% 100%, 0 100%, 30% 50%);
+.tailLeft {
+  left: calc(var(--tail-offset) * -1);
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% calc(100% - var(--fold-drop)), 
+    var(--tail-offset) 100%, 
+    0 100%, 
+    30% 50%
+  );
 }
 
-.ribbon::after {
-  right: -18px;
-  clip-path: polygon(0 0, 100% 0, 70% 50%, 100% 100%, 40% 100%, 0 calc(100% - 8px));
+.tailRight {
+  right: calc(var(--tail-offset) * -1);
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    70% 50%, 
+    100% 100%, 
+    calc(100% - var(--tail-offset)) 100%, 
+    0 calc(100% - var(--fold-drop))
+  );
 }
 
 .yellow {
-  --tail: #e08a00;
-  font-size: 17px;
-  color: #3a1a10;
-  background: linear-gradient(180deg, #ffd24d, #ffb020);
+  --bg: linear-gradient(180deg, #ffd24d, #ffb020);
+  --tail-color: #e08a00;
+  --txt-color: #3a1a10;
+  --size: 17px;
 }
 
 .red {
-  --tail: #b52d12;
-  font-size: 26px;
-  font-family: var(--font-display);
-  color: #fff;
-  background: linear-gradient(180deg, #ff6a3d, #e8421f);
-  text-shadow: 0 2px 0 rgba(120, 30, 0, 0.35);
+  --bg: linear-gradient(180deg, #ff6a3d, #e8421f);
+  --tail-color: #b52d12;
+  --txt-color: #fff;
+  --size: 26px;
+  --font: var(--font-display);
+  --txt-shadow: 0 2px 0 rgba(120, 30, 0, 0.35);
 }
 
 .tilt {
   transform: rotate(-3deg);
-}
-
-.text {
-  display: block;
 }
