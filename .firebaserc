@@ -1,7 +1,5 @@
 {
   "projects": {
-    "dev": "shopee-memory-game"
-  },
-  "targets": {},
-  "etags": {}
+    "default": "corded-well-200810"
+  }
 }
